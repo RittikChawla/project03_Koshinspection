@@ -1,0 +1,819 @@
+                /* Variables */
+                
+                @import url('https://fonts.google.com/specimen/Kanit?subset=thai');
+                @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+                 :root {
+                    --orange: rgba(203, 89, 31, 1);
+                    --orange-seceondary: rgba(254, 111, 39, 1);
+                    --darkblue: rgba(0, 53, 121, 1);
+                    --blue: rgba(0, 126, 177, 1);
+                    --black: rgba(47, 47, 47, 1);
+                    --white: #ffffff;
+                    --gray: rgba(240, 240, 240, 1);
+                    --white-alpha-40: rgba(255, 255, 255, 0.4);
+                    --white-alpha-25: rgba(255, 255, 255, 0.4);
+                    --orange-alpha-80: rgba(203, 89, 31, 0.8);
+                    --blue-alpha-20: rgba(23, 97, 160, 0.2);
+                    --shadown-alpha-20: var(--black);
+                    --backdrop-filter-blur: blur(5px);
+                }
+                
+                html {
+                    scroll-behavior: smooth;
+                    scroll-snap-type: initial;
+                }
+                
+                body {
+                    scroll-behavior: smooth;
+                    scroll-snap-type: initial;
+                    margin: 0;
+                    padding: 0;
+                    background: #FFFFFF;
+                }
+                /* navbar */
+                
+                nav {
+                    padding: 5px 20px;
+                    background-color: #ffffff;
+                    display: inline-flex;
+                    position: relative;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: bolder;
+                }
+                
+                .nav-item {
+                    color: white;
+                    text-decoration: none;
+                    padding: 0 30px;
+                    font-size: 20px;
+                }
+                
+                .nav-link {
+                    color: var(--orange);
+                    text-decoration: none;
+                    padding: 15px;
+                    font-size: 20px;
+                }
+                
+                .nav-link:hover {
+                    color: white;
+                }
+                
+                .nav-item:focus,
+                .nav-item:hover {
+                    color: white;
+                    background-color: var(--orange);
+                    border-radius: 10px;
+                    transition: 0.3s;
+                    height: 100%;
+                    -webkit-transition: 0.3s;
+                    -moz-transition: 0.3s;
+                    -ms-transition: 0.3s;
+                    -o-transition: 0.3s;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                }
+                
+                .nav-item:hover .nav-link {
+                    color: white;
+                }
+                
+                .logo img {
+                    width: 100%;
+                }
+                
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+                
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: var(--orange);
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    padding: 12px 16px;
+                    z-index: 1;
+                }
+                
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+                
+                @media (max-width: 992px) {
+                    .border-center {
+                        border-left: 2px solid transparent;
+                    }
+                    .socialmenu {
+                        display: inline;
+                    }
+                    .menu {
+                        text-align: center;
+                    }
+                    .toggle {
+                        overflow: visible;
+                    }
+                }
+                /* banner main-image */
+                
+                .main-image {
+                    position: relative;
+                    background: url('../img/banner.jpg');
+                    background-size: cover;
+                    width: 100%;
+                    min-height: 766px;
+                    font-family: 'Noto Sans Thai UI', sans-serif;
+                    /*overflow: hidden;*/
+                    height: fit-content;
+                }
+                
+                .banner_content {
+                    position: absolute;
+                    margin: 150px 50px;
+                    font-size: 56px;
+                    color: white;
+                    right: 0;
+                    bottom: 400px;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 800;
+                }
+                
+                .banner_description {
+                    display: flex;
+                    right: 0;
+                    position: absolute;
+                    bottom: 450px;
+                    max-width: 600px;
+                    text-align: right;
+                    margin: 0 50;
+                    color: white;
+                    font-size: 20px;
+                }
+                
+                .button_banner {
+                    position: absolute;
+                    background-color: var(--orange-alpha-80);
+                    bottom: 0;
+                    right: 45%;
+                    padding: 20px;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 600;
+                    width: 100%;
+                    max-width: 250px;
+                    text-align: center;
+                    margin-bottom: 100px;
+                    border-radius: 0px 20px 0px 20px;
+                    font-family: 'Roboto Condensed', sans-serif;
+                }
+                
+                .button_banner:hover {
+                    background-color: var(--orange);
+                    color: white;
+                    transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    -moz-transition: 0.5s;
+                    -ms-transition: 0.5s;
+                    -o-transition: 0.5s;
+                }
+                
+                .btn {
+                    --bs-btn-padding-x: rem;
+                }
+                
+                .bottom_banner {
+                    display: block;
+                    background-color: var(--black);
+                    width: 100%;
+                    height: 250px;
+                }
+                
+                .row_inspection {
+                    margin: 0 200px;
+                }
+                
+                .bottom_inspection {
+                    display: block;
+                    margin: 40px 80px;
+                    width: 100%;
+                    max-width: 200px;
+                }
+                
+                .bottom_inspection img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                .bottom_inspection p {
+                    font-family: 'Roboto Condensed', sans-serif;
+                    color: white;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                
+                #textbuttom {
+                    color: white;
+                    font-family: 'Noto Sans Thai UI', sans-serif;
+                    overflow: var(--white);
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                @media (max-width: 992px) {
+                    .main-image {
+                        position: relative;
+                        background: url(../img/banner.jpg);
+                        background-size: cover;
+                        min-height: 50vh;
+                        max-height: 100vh;
+                    }
+                    .banner_button {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        height: 60%;
+                    }
+                    .btn-outline-primary {
+                        background-color: var(--blue);
+                        color: white;
+                        font-family: 'Noto Sans Thai UI', sans-serif;
+                        font-size: 24px;
+                        border: 5px solid white;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        width: 200px;
+                        height: 70px;
+                        margin: 0px 30px;
+                    }
+                    #img_button_phone {
+                        width: 41px;
+                    }
+                    #img_button_van {
+                        width: 55px;
+                    }
+                    .btn-outline-warning {
+                        background-color: var(--orange-alpha-20);
+                        color: white;
+                        font-family: 'Noto Sans Thai UI', sans-serif;
+                        font-size: 24px;
+                        border: 5px solid white;
+                        border-radius: 20px;
+                        width: 200px;
+                        height: 70px;
+                        margin: 0px 0px 0px 10px;
+                        padding: 7px;
+                    }
+                    .bottom_banner {
+                        background-color: rgba(0, 0, 0, 0.75);
+                        width: 100%;
+                    }
+                    #textbuttom {
+                        width: 1920%;
+                        padding: 0rem;
+                        text-align: justify;
+                        font-size: 14px;
+                    }
+                }
+                /* detail home */
+                
+                .detail_home_about .col-8,
+                .col-4 {
+                    padding: 80px;
+                }
+                
+                .detail_home_about h1 {
+                    color: var(--orange);
+                    font-weight: 900;
+                    padding: 10px;
+                    font-family: 'Concert One', cursive;
+                }
+                
+                .detail_home_about p {
+                    color: var(--black);
+                    font-weight: 200;
+                    font-size: 18px;
+                    padding: 10px;
+                    font-family: 'Robo', cursive;
+                }
+                
+                .bardetail h1 {
+                    background-color: var(--blue);
+                    max-width: 543;
+                    width: 80%;
+                    border-top-right-radius: 60px;
+                    border-bottom-right-radius: 60px;
+                    font-weight: 600;
+                    color: white;
+                    padding: 30;
+                }
+                
+                .detail {
+                    display: flex;
+                    margin-top: 25px;
+                    font-family: 'Noto Sans Thai UI', sans-serif;
+                }
+                
+                .rent_detail {
+                    color: red;
+                    font-size: 34;
+                    font-weight: 600;
+                    text-shadow: #333333;
+                }
+                
+                .detailphoto {
+                    display: block;
+                    text-align: right;
+                }
+                
+                .col-md-8 h2 {
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 130%;
+                    margin-top: 20px;
+                }
+                /* Why Choose Us */
+                
+                .detail_home_why-choose-us {
+                    background-image: url(../img/home/whychooseus.svg);
+                    background-size: cover;
+                    position: relative;
+                    height: 600px;
+                    width: 100%;
+                }
+                
+                .detail_home_why-choose-us h2 {
+                    color: white;
+                    display: flex;
+                    font-weight: 300;
+                    max-width: 600px;
+                    margin: 50px 200px;
+                    font-family: 'Concert One', cursive;
+                    font-size: 48px;
+                }
+                
+                .group01 {
+                    color: white;
+                    width: 100px;
+                    margin: 15px 300px;
+                    font-family: 'Concert One', cursive;
+                    position: absolute;
+                }
+                
+                .group02 {
+                    color: white;
+                    width: 600px;
+                    margin: 20px 300px;
+                    font-family: 'Concert One', cursive;
+                    position: absolute;
+                }
+                
+                .group01 img {
+                    display: grid;
+                    padding: 20px;
+                }
+                
+                .group02 p {
+                    display: grid;
+                    padding: 11.5px 100px;
+                    color: white;
+                    font-size: 18px;
+                }
+                
+                .video {
+                    display: flex;
+                    margin-top: 200px;
+                }
+                /* about page */
+                
+                .about-banner {
+                    background-image: url('../../assets/img/about/banner.jpg');
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    height: 300px;
+                    width: 100%;
+                }
+                
+                .about-banner-header {
+                    position: absolute;
+                    display: flex;
+                    color: white;
+                    right: 45%;
+                    top: 40%;
+                    font-weight: 900;
+                }
+                
+                .detail_about {
+                    padding: 50px;
+                }
+                
+                .detail_about h1 {
+                    font-size: 46px;
+                    font-weight: 900;
+                    color: var(--orange);
+                    font-family: 'Concert One', cursive;
+                }
+                
+                .detail_about h2 {
+                    font-size: 36px;
+                    color: var(--black);
+                    font-family: 'Concert One', cursive;
+                }
+                
+                .detail_about p {
+                    font-size: 18px;
+                    color: var(--black);
+                    padding-top: 20px;
+                }
+                
+                .supporter_about {
+                    background-color: var(--gray);
+                    position: relative;
+                }
+                
+                .supporter_about strong {
+                    color: var(--black);
+                    font-family: 'Concert One', cursive;
+                    font-size: 20px;
+                    padding: 20px;
+                    opacity: 0.7;
+                }
+                
+                .supporter_about p {
+                    font-size: 16px;
+                    max-width: 600px;
+                    text-align: center;
+                    opacity: 0.5;
+                }
+                /* Service Page */
+                
+                .service {
+                    position: relative;
+                    height: 750px;
+                    background-color: var(--gray);
+                }
+                
+                .service h1 {
+                    display: flex;
+                    position: absolute;
+                    color: var(--orange);
+                    top: 100px;
+                    left: 150px;
+                }
+                
+                .service p {
+                    display: flex;
+                    position: absolute;
+                    color: var(--black);
+                    top: 20px;
+                    margin: 150px;
+                }
+                
+                .service img {
+                    position: absolute;
+                    color: var(--black);
+                    bottom: 50px;
+                }
+                
+                .homeinspection {
+                    background-color: var(--gray);
+                    position: relative;
+                }
+                
+                .homeinspection p {
+                    position: relative;
+                    padding: 20px;
+                    font-weight: 500;
+                    opacity: 0.5;
+                    text-align: left;
+                }
+                
+                .arrow_service {
+                    margin-bottom: 12px;
+                }
+                /* pricepage */
+                
+                .detail_price {
+                    position: relative;
+                    margin-left: 350px;
+                    margin-right: 350px;
+                    margin-top: 50px;
+                }
+                
+                .detail_price table {
+                    border-collapse: collapse;
+                    border: solid var(--gray) 2px;
+                    width: 100%;
+                    max-width: 1200px;
+                    margin-bottom: 50px;
+                }
+                
+                .detail_price tr:nth-child(odd) {
+                    background-color: #f2f2f2
+                }
+                
+                .table01 th,
+                .table02 th {
+                    text-align: left;
+                    padding: 20px;
+                }
+                
+                .table01 td,
+                .table02 td {
+                    text-align: left;
+                    padding: 10px;
+                }
+                
+                .detail_price th {
+                    background-color: var(--orange);
+                    color: white;
+                    max-width: 100px;
+                    font-size: 24px;
+                    text-shadow: var(--black) 1px 1px 3px;
+                    padding-left: 50px;
+                    font-weight: 400;
+                }
+                
+                .detail_price td {
+                    color: var(--orange);
+                    font-size: 18px;
+                    padding-left: 50px;
+                    font-weight: 400;
+                }
+                /* contact page*/
+                
+                .contact {
+                    background-color: var(--gray);
+                    position: relative;
+                }
+                
+                .contact-heading-title {
+                    font-family: 'Robo', cursive;
+                    color: var(--orange);
+                    font-weight: 600;
+                    font-size: 48px;
+                    margin-top: 50px;
+                }
+                
+                .contact input {
+                    width: 400px;
+                    background-color: #d4d4d4;
+                    padding: 5px;
+                    border: none;
+                    display: block;
+                    margin-bottom: 20px
+                }
+                
+                .contact textarea {
+                    width: 400px;
+                    height: 200px;
+                    background-color: #d4d4d4;
+                    padding: 5px;
+                    border: none;
+                    display: block;
+                    margin-bottom: 20px
+                }
+                /* Contact us */
+                
+                .contact_us {
+                    position: relative;
+                    height: 300px;
+                    z-index: 2;
+                }
+                
+                .contact_support {
+                    background-color: var(--orange);
+                    width: 450px;
+                    position: absolute;
+                    z-index: 2;
+                    height: 450px;
+                    margin-left: 100px;
+                    top: 0;
+                }
+                
+                .contact_support h1 {
+                    position: relative;
+                    padding: 30px 20px;
+                    font-size: 46px;
+                    color: white;
+                    text-shadow: 2px 3px 2px var(--black);
+                    text-align: center;
+                    font-weight: bolder;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    top: 0;
+                }
+                
+                .contact_support span {
+                    display: flex;
+                    padding: 20px;
+                    color: white;
+                    text-align: left;
+                    height: 150px;
+                    padding: 0 40px;
+                    font-size: 20px;
+                    top: 0;
+                }
+                
+                #shape-contact {
+                    position: absolute;
+                    z-index: 1;
+                    top: 20px;
+                }
+                
+                .contact_us h2 {
+                    text-align: right;
+                    font-weight: 900;
+                    font-size: 56px;
+                    padding: 40px 150px;
+                    align-content: right;
+                    display: block;
+                    color: var(--orange);
+                    font-family: 'Roboto Condensed', sans-serif;
+                }
+                
+                .contact_us p {
+                    position: absolute;
+                    text-align: right;
+                    right: 0;
+                    bottom: 80px;
+                    margin: 20px 100px;
+                    max-width: 1200px;
+                    font-weight: 200;
+                    font-size: 20px;
+                }
+                
+                .contact-image {
+                    background-image: url('../img/contact/background.png');
+                    background-repeat: no-repeat;
+                    position: relative;
+                    background-size: cover;
+                    max-width: 2000px;
+                    width: 100%;
+                    scale: 100%;
+                    height: 650px;
+                }
+                
+                .firstrow {
+                    color: white;
+                    position: absolute;
+                    left: 0;
+                    margin: 200px 300px;
+                }
+                
+                .contact_location {
+                    scale: 150%;
+                    /* text-align: -webkit-auto; */
+                    position: absolute;
+                    top: 155px;
+                }
+                
+                .contact_phone {
+                    scale: 150%;
+                    /* text-align: -webkit-auto; */
+                    position: absolute;
+                    top: 260px;
+                }
+                
+                .contact_mail {
+                    scale: 150%;
+                    /* text-align: -webkit-auto; */
+                    position: absolute;
+                    top: 345px;
+                }
+                
+                .secondrow {
+                    color: white;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    margin: 200px 850px;
+                }
+                
+                .logo_contact {
+                    position: absolute;
+                    right: 0;
+                    margin: 200px;
+                    scale: 150%;
+                }
+                
+                .contact-table h6 {
+                    color: white;
+                    font-size: 32px;
+                    font-weight: bold;
+                    font-family: 'Roboto Condensed', sans-serif;
+                }
+                
+                .contact-table td {
+                    padding: 20px;
+                }
+                
+                .contact-table p {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                /* footer */
+                
+                .footer_row {
+                    background-color: var(--black);
+                    color: white;
+                    list-style: none;
+                    display: flex;
+                }
+                
+                .text-muted {
+                    display: flex;
+                    justify-content: right;
+                    right: 0;
+                }
+                
+                .text {
+                    position: relative;
+                    justify-content: right;
+                }
+                
+                .footer_center {
+                    color: white;
+                    font-family: 'Noto Sans Thai UI', sans-serif;
+                    margin: 10% 0;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: relative;
+                    display: block;
+                    text-align: center;
+                }
+                
+                #footer_row li {
+                    color: white;
+                    font-family: 'Noto Sans Thai UI', sans-serif;
+                    list-style: none;
+                    line-height: 30px;
+                }
+                
+                #row_right img {
+                    max-width: 100px;
+                    width: 50px;
+                    height: 40px;
+                    margin: 10px 0;
+                    padding: auto;
+                    align-content: center;
+                    justify-content: center;
+                    display: inline-table;
+                }
+                
+                @media (max-width: 992px) {
+                    #footer_row {
+                        height: min-content;
+                        color: white;
+                    }
+                    . {
+                        margin: 20 0px;
+                        width: 100%;
+                    }
+                    .footer_center {
+                        color: white;
+                        font-family: 'Noto Sans Thai UI', sans-serif;
+                        margin: 10% 0;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        position: relative;
+                        display: block;
+                        text-align: center;
+                    }
+                    #footer_row li {
+                        color: white;
+                        font-family: 'Noto Sans Thai UI', sans-serif;
+                        list-style: none;
+                        line-height: 30px;
+                        scale: 80%;
+                    }
+                    #row_right {
+                        color: #333333;
+                        max-width: 100px;
+                        width: 50px;
+                        margin: 0 0;
+                        padding: auto;
+                        text-align: justify;
+                        align-content: left;
+                        justify-content: left;
+                        display: inline-table;
+                    }
+                }
