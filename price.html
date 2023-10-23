@@ -32,10 +32,39 @@
 
 </head>
 
+<script>
+    // Using JavaScript to include HTML content
+    fetch('./include/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+    fetch('./include/home/banner.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('banner-home').innerHTML = data;
+        });
+    fetch('./include/about/banner.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('banner-about').innerHTML = data;
+        });
+    fetch('./include/contact.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('contact').innerHTML = data;
+        });
+    fetch('./include/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
 <body>
 
-    <?php include_once 'include/navbar.php' ?>
-    <?php include 'include/about/banner.php' ?>
+    <div id="navbar"></div>
+    <div id="banner-about"></div>
 
     <div class="content1">
         <h1></h1>
@@ -283,7 +312,7 @@
 
 
 
-    <?php include 'include/contact.php'?>
-    <?php include 'include/footer.php'?>
+    <div id="contact"></div>
+    <div id="footer"></div>
 
 </body>
