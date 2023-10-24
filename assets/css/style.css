@@ -22,6 +22,7 @@
                 html {
                     scroll-behavior: smooth;
                     scroll-snap-type: initial;
+                    
                 }
                 
                 body {
@@ -777,8 +778,6 @@
                     #footer_row {
                         height: min-content;
                         color: white;
-                    }
-                    . {
                         margin: 20 0px;
                         width: 100%;
                     }
